@@ -9,6 +9,7 @@ namespace BootstrapSupport
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/js").Include(
+                "~/Scripts/toastr.js",
                 "~/Scripts/angular.js",
                 "~/Scripts/jquery-{version}.js",
                 "~/Scripts/jquery-migrate-{version}.js",
@@ -19,6 +20,7 @@ namespace BootstrapSupport
                 ));
 
             bundles.Add(new StyleBundle("~/content/css").Include(
+                "~/Content/toastr.css",
                 "~/Content/bootstrap.css",
                 "~/Content/body.css",
                 "~/Content/bootstrap-responsive.css",

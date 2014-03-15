@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Create a Trip";
+}
+
+<h2>Create a new Trip</h2>
+
+@section Scripts {
+    <script>
+        // call toastr on load
+        $(function () {
+            toastr.warning('Creating a new Trip ');
+        })
+    </script>
+}
+
+
+<style>
+    .spaceIt {
+        margin-top: 20px;
+    }
+</style>
+
+
+<div class="row"> 1
+    <div class="col-lg-offset-1 col-sm-8"> 2
+        <div class="container"> 3
+            <div class="row"> 4
+                <div class="col-md-8 col-md-offset-2 well-lg well spaceIt">
+                    <!-- form -->
+                    @*<label>Name of Trip</label>*@
+
+                    <input type="text" name="txtbxTripName" width="200" placeholder="Trip's Name" /><br /><br />
+                    <input type="text" name="txtbxTripStartDate" placeholder="Start date" /><br /><br />
+                    <input type="text" name="txtbxTripEndDate" placeholder="End date" /><br /><br />
+                    <input type="text" name="txtbxTripMinimunNoGuests" placeholder="mimimun number of guests " /><br /><br />
+                    <input type="submit" name="btnSubmit" value="Submit" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -22,8 +22,22 @@ namespace MvcApp.Controllers
             //throw new Exception(ConfigurationManager.ConnectionStrings["TravelDatabase"].ConnectionString);
 
         }
+        public ActionResult createTrip()
+        {
+            return View("createTrip");
+        }
 
+        [HttpPost]
+        public ActionResult createTrip([Bind(Include = "TripId,name,startDate,endDate,minimunNumberOfGuests,Leg")]Trip trip)
+        {
+            if (ModelState.IsValid)
+            {
+                _IR.addTrip(trip);
+                return View("Index");   
+            }
+            return View("Create");
+            
+        }
         
-
     }
 }

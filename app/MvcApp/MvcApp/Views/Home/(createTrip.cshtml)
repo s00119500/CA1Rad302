@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MvcApp.Models.Trip>
+
+@{
+    ViewBag.Title = "Create a Trip";
+}
+@section Scripts{
+    <script>
+        $(function () {
+            toastr.warning('Creating a new Trip')
+            
+        })
+    </script>
+    }
+
+<h2>createTrip</h2>
+
+    @* @Html.ActionLink("Create New", "Create")*@
+<body>
+    @*<form role="form">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Check me out
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>*@
+    <table>
+        @*<tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.startDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.endDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.minimunNumberOfGuests)
+                    </th>
+                    <th></th>
+                </tr>
+
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.startDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.endDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.minimunNumberOfGuests)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id=item.TripId }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.TripId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.TripId })
+                    </td>
+                </tr>
+            }*@
+
+    </table>
+</body>

@@ -3,10 +3,16 @@
 @{
     ViewBag.Title = "Index";
 }
-
+@section scripts{
+    <script>
+        $(function() {
+            toastr.warning('Displaying ' + @Model.Count() + ' Trips')
+        })
+    </script>
+    }
 <h2>Index</h2>
 <body data-ng-app="">
-
+    
    @*<div ng-init="friends = [
     {name:'John', age:25, gender:'boy'},
     {name:'Jessie', age:30, gender:'girl'},

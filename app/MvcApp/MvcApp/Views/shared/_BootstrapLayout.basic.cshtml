@@ -13,7 +13,8 @@
         @* favicons and touch icons go here *@
     </head>
     <body>
-        <input type="button" name="name" value="Add New Trip" class="btn btn-primary"  />
+        @Html.ActionLink("Add a Trip", "createTrip", "Home", new { @class = "btn btn-primary" })
+        @*<input type="button" name="name" value="Add New Trip" class="btn btn-primary"  />*@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
@@ -22,10 +23,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#" title="change in _bootstrapLayout.basic.cshtml">Application Name</a>
-                    <div class="nav-collapse collapse">
+                    @*<a class="brand" href="#" title="change in _bootstrapLayout.basic.cshtml">Application Name</a>*@
+                    @*<div class="nav-collapse collapse">
                           @Html.Navigation()
-                    </div>
+                    </div>*@
                 </div>
             </div>
         </div>        

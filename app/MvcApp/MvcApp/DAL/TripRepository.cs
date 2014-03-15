@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
+using MvcApp.DAL;
 
 namespace MvcApp.DAL
 {
@@ -18,6 +20,13 @@ namespace MvcApp.DAL
         {
 
             return _ctxClass.Trips;
+        }
+
+        public Trip addTrip(Trip t) {
+            //_ctxClass.Trips.Add(t);
+            _ctxClass.Entry(t).State = EntityState.Added;
+            _ctxClass.SaveChanges();
+            return t;
         }
         //public IQueryable<College2.Models.Student> GetAllStudents()
         //{
