@@ -25,15 +25,16 @@
     <div class="col-lg-offset-1 col-sm-8"> 2
         <div class="container"> 3
             <div class="row"> 4
-                <div class="col-md-8 col-md-offset-2 well-lg well spaceIt">
+                <div class="col-md-8 col-md-offset-2 well-lg well spaceIt ">
                     <!-- form -->
                     @*<label>Name of Trip</label>*@
 
-                    <input type="text" name="txtbxTripName" width="200" placeholder="Trip's Name" /><br /><br />
-                    <input type="text" name="txtbxTripStartDate" placeholder="Start date" /><br /><br />
-                    <input type="text" name="txtbxTripEndDate" placeholder="End date" /><br /><br />
-                    <input type="text" name="txtbxTripMinimunNoGuests" placeholder="mimimun number of guests " /><br /><br />
-                    <input type="submit" name="btnSubmit" value="Submit" class="btn btn-primary" />
+                    <input type="text" name="txtbxTripName"  placeholder="Trip's Name" data-placement="right" title="Tooltip on right" /><br /><br />
+                    <input type="text" name="txtbxTripStartDate" placeholder="Start date" data-placement="right" title="Tooltip on right" /><br /><br />
+                    <input type="text" name="txtbxTripEndDate" placeholder="End date" data-placement="right" title="Tooltip on right" /><br /><br />
+                    <input type="text" name="txtbxTripMinimunNoGuests" placeholder="mimimun number of guests " data-placement="right" title="Tooltip on right" />
+                    <br /><br />
+                    <input type="submit" name="btnSubmit" value="Submit" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Add the trip ?" />
                 </div>
             </div>
         </div>

@@ -26,7 +26,10 @@ canvas,
 video {
   display: inline-block;
 }
-
+/* my css*/
+/*.mySlide{
+    height:600px; width:200px;
+}*/
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -4802,7 +4805,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse {
   background-color: #222222;
-  border-color: #080808;
+  /*border-color: #080808;*/
+  background-color:transparent;
 }
 
 .navbar-inverse .navbar-brand {
