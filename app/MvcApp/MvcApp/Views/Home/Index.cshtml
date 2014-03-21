@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<MvcApp.Models.Trip>
-
+@using BootstrapSupport;
 @{
-    ViewBag.Title = "Index";
+    //ViewBag.Title = "Index";
 }
 @section scripts{
     <script>
@@ -19,7 +19,7 @@
     </script>
 
     }
-<h2>Index</h2>
+
 
 <body data-ng-app="">
     <div>
@@ -49,6 +49,7 @@
     <div class="tab-content">
         <div class="tab-pane active " id="home">
             <div class="">
+                <h2>Why stay home?</h2>
                 <div class="mySlide">
                     <img src="~/Images/img1.jpg" />
                     <img src="~/Images/img2.jpg" />
@@ -59,6 +60,30 @@
             
         </div>
         <div class="tab-pane" id="trips">
+            <br />
+            <input type="submit" name="addTrip" value="Add a Trip" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddTrip" />
+            <br />
+            <!-- Modal -->
+            <div class="modal fade" id="#myModalAddTrip" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            bs-example-modal-lgbs-example-modal-lgbs-example-modal-lg
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+@*table*@
+            <br />
             <table class="table table-striped">
                 <tr>
                     <th>
@@ -71,8 +96,9 @@
                         @Html.DisplayNameFor(model => model.endDate)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.minimunNumberOfGuests)
+                        @Html.DisplayNameFor(model => model.minimunNumberOfGuests )
                     </th>
+                    <th></th>
                     <th></th>
                 </tr>
 
@@ -97,10 +123,11 @@
                         @Html.ActionLink("Delete", "Delete", new { id = item.TripId })
                     </td>*@
                         <td>
-                            <button class="btn btn-danger">Trash It</button>
+                            @Html.ActionLink("HHH","Delete",new {id = item.TripId})
+                            @*<input type="submit" name="option" class="btn btn-danger" value="Trash"/>*@
                         </td>
                         <td>
-                            <button class="btn btn-primary">Add A Leg</button>
+                            <input type="submit" name="option" class="btn btn-primary" value="Add A Leg?" />
                         </td>
                     </tr>
                 }

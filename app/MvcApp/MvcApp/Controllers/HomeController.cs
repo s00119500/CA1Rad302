@@ -22,6 +22,26 @@ namespace MvcApp.Controllers
             //throw new Exception(ConfigurationManager.ConnectionStrings["TravelDatabase"].ConnectionString);
 
         }
+
+        //delete a trip or add a leg
+        public ActionResult Submit(string option) { return View("Index"); }
+
+        [HttpPost]
+        public ActionResult Submit(string option,int id)
+        {
+            if (option == "Trash") // User clicked "Delete"
+            {
+                
+            }
+            else
+            {
+                // User clicked "Add Trip"
+            }
+            return View();
+    }
+
+
+
         public ActionResult createTrip()
         {
             return View("createTrip");
@@ -35,9 +55,21 @@ namespace MvcApp.Controllers
                 _IR.addTrip(trip);
                 return View("Index");   
             }
-            return View("Create");
+            return View("createTrip");
             
         }
+
+        public ActionResult addLeg() 
+        {
+            return View (); 
+        }
+
+        [HttpPost]
+        public ActionResult addLeg([Bind(Include = "")]Leg leg,Trip trip)
+        {
+            return View();
+        }
+
         
     }
 }

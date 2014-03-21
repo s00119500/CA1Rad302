@@ -28,6 +28,8 @@ namespace MvcApp.DAL
             _ctxClass.SaveChanges();
             return t;
         }
+
+        public Leg addLeg(Leg l, Trip t) { return l; }
         //public IQueryable<College2.Models.Student> GetAllStudents()
         //{
         //    return _ctx.Students.Include(s => s.Enrollments).OrderBy(s => s.LastName);

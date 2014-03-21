@@ -13,7 +13,7 @@ namespace MvcApp.DAL
         // add trip 
         Trip addTrip(Trip t);
         //// add leg, you'll need the trip your adding it to
-        //Leg addLeg(Leg l, Trip t);
+        Leg addLeg(Leg l, Trip t);
     }
     
 }
