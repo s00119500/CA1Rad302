@@ -12,8 +12,10 @@ namespace MvcApp.DAL
         IQueryable<Trip> DisplayAllTrip();
         // add trip 
         Trip addTrip(Trip t);
+        //Trip trashTrip(int? id);
         //// add leg, you'll need the trip your adding it to
         Leg addLeg(Leg l, Trip t);
+        //int savechanges();
     }
     
 }

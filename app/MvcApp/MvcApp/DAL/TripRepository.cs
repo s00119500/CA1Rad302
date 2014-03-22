@@ -34,5 +34,7 @@ namespace MvcApp.DAL
         //{
         //    return _ctx.Students.Include(s => s.Enrollments).OrderBy(s => s.LastName);
         //}
+        //public int saveChanges() { return 1; }
+        //public Trip trashTrip(Trip t) { return t; }
     }
 }

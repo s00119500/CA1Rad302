@@ -155,6 +155,10 @@
     <Compile Include="Migrations\201403131723092_InitialCreate.Designer.cs">
       <DependentUpon>201403131723092_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201403211419441_addedCurrentNoOfGuests.cs" />
+    <Compile Include="Migrations\201403211419441_addedCurrentNoOfGuests.Designer.cs">
+      <DependentUpon>201403211419441_addedCurrentNoOfGuests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\All.cs" />
     <Compile Include="NavigationRoutes\INavigationRouteFilter.cs" />
@@ -228,6 +232,7 @@
     <Content Include="Scripts\toastr.min.js.map" />
     <None Include="Views\Home\%28createTrip.cshtml%29" />
     <Content Include="Views\Home\createTrip.cshtml" />
+    <Content Include="Views\Home\trashTrip.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -241,6 +246,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201403131723092_InitialCreate.resx">
       <DependentUpon>201403131723092_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403211419441_addedCurrentNoOfGuests.resx">
+      <DependentUpon>201403211419441_addedCurrentNoOfGuests.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
